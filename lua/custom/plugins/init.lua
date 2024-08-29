@@ -33,4 +33,16 @@ return {
       }
     end,
   },
+  {
+    -- This is what ultimately made this work:
+    -- https://github.com/iamcco/markdown-preview.nvim/issues/690#issuecomment-2283748484
+    -- https://github.com/iamcco/markdown-preview.nvim/pull/691/files
+    'iamcco/markdown-preview.nvim',
+    cmd = { 'MarkdownPreviewToggle', 'MarkdownPreview', 'MarkdownPreviewStop' },
+    ft = { 'markdown' },
+    build = function()
+      require('lazy').load { plugins = { 'markdown-preview.nvim' } }
+      vim.fn['mkdp#util#install']()
+    end,
+  },
 }

@@ -183,7 +183,10 @@ vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 
 -- Exit insert mode faster
 vim.keymap.set('i', 'jj', '<ESC>')
-vim.keymap.set('i', '<CapsLock>', '<ESC>')
+-- This does not work at the moment. May be unneccesary anyways.
+-- vim.keymap.set('i', '<CapsLock>', '<ESC>')
+vim.keymap.set('i', 'jk', '<ESC>')
+vim.keymap.set('i', 'kj', '<ESC>')
 
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows
