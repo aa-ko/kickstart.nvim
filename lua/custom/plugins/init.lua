@@ -45,4 +45,5 @@ return {
       vim.fn['mkdp#util#install']()
     end,
   },
+  { 'akinsho/bufferline.nvim', version = '*', dependencies = 'nvim-tree/nvim-web-devicons' },
 }

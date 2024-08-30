@@ -49,7 +49,7 @@ Kickstart Guide:
       - <escape key>
       - :
       - Tutor
-      - <enter key>
+     - <enter key>
 
     (If you already know the Neovim basics, you can skip this step.)
 
@@ -156,6 +156,10 @@ vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
+
+-- Set tab width
+vim.cmd 'set shiftwidth=4'
+vim.cmd 'set tabstop=4'
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
@@ -269,7 +273,7 @@ require('lazy').setup({
   -- lazy loading plugins that don't need to be loaded immediately at startup.
   --
   -- For example, in the following configuration, we use:
-  --  event = 'VimEnter'
+  -- event = 'VimEnter'
   --
   -- which loads which-key before all the UI elements are loaded. Events can be
   -- normal autocommands events (`:help autocmd-events`).
@@ -612,10 +616,32 @@ require('lazy').setup({
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
-        -- clangd = {},
+        clangd = {},
         -- gopls = {},
         -- pyright = {},
-        -- rust_analyzer = {},
+        rust_analyzer = {},
+        -- angularls = {},
+        bashls = {},
+        -- cmake = {},
+        csharp_ls = {},
+        cssls = {},
+        dockerls = {},
+        -- elixirls = {},
+        -- fsharp_language_server = {},
+        -- gleam = {},
+        graphql = {},
+        html = {},
+        -- hyprls = {},
+        markdown_oxide = {},
+        -- nim_langserver = {},
+        -- nixd = {},
+        -- postgres_lsp = {},
+        svelte = {},
+        tailwindcss = {},
+        tsserver = {},
+        -- v_analyzer = {},
+        -- zls = {},
+
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
