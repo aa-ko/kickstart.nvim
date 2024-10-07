@@ -638,7 +638,7 @@ require('lazy').setup({
         -- postgres_lsp = {},
         svelte = {},
         tailwindcss = {},
-        tsserver = {},
+        ts_ls = {},
         -- v_analyzer = {},
         -- zls = {},
 
